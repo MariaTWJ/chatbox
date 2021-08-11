@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <section class="msger">
+<head>
+  <meta charset="utf-8">
+  <title>My Page Title</title>  
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="client.js"></script>
+  <div class="msger-header-title">
+    <i class="fas fa-comment-alt"></i> SimpleChat
+  </div>
+  <div class="msger-header-options">
+    <span><i class="fas fa-cog"></i></span>
+  </div>
+
+  <style>
+    html {
+  box-sizing: border-box;
+}
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: var(--body-bg);
+  font-family: Helvetica, sans-serif;
+}
+
+.msger {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 867px;
+  margin: 25px 10px;
+  height: calc(100% - 50px);
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--msger-bg);
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.msger-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: var(--border);
+  background: #eee;
+  color: #666;
+}
+
+.msger-send-btn {
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.msger-send-btn:hover {
+  background: rgb(0, 180, 50);
+}
+
+
+   
+
+    #messages { list-style-type: none; margin: 0; padding: 0; }
+    #messages > div { padding: 0.5rem 1rem; }
+    #messages > div:nth-child(odd) { background: #efefef; }
+  </style>
+
+</head>
+
+<body>
+    
+    <div id="messages"></div>
+    <form id="msgF">
+      <input type="text" name="msg">
+      <button id="msger-send-btn">SEND</button>
+  </form>
+  
+</body>
+</html>
+</section>
