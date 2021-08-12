@@ -10,7 +10,6 @@ io.on('connection', (socket) => {
       socket.emit("output-messages", result)
     })
     console.log('a user connected');
-    socket.emit('message',"Hello World");
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
